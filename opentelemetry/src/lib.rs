@@ -290,6 +290,10 @@ pub mod time {
         all(target_arch = "wasm32", target_os = "wasi")
     ))]
     pub use std::time::{Duration, Instant, SystemTime, SystemTimeError, UNIX_EPOCH};
+
+    pub fn now() -> SystemTime {
+        SystemTime::now()
+    }
 }
 
 /// Platform-agnostic environment variable access for WASM compatibility.
