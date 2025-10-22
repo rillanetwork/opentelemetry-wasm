@@ -5,10 +5,13 @@ use std::{
         Arc, Mutex, Weak,
     },
     thread,
-    time::{Duration, Instant},
 };
 
-use opentelemetry::{otel_debug, otel_error, otel_info, otel_warn, Context};
+use opentelemetry::{
+    otel_debug, otel_error, otel_info, otel_warn,
+    time::{Duration, Instant},
+    Context,
+};
 
 use crate::{
     error::{OTelSdkError, OTelSdkResult},

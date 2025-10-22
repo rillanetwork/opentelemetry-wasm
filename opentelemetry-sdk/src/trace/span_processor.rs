@@ -43,11 +43,11 @@ use opentelemetry::{otel_debug, otel_error, otel_warn};
 use std::cmp::min;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::{Arc, Mutex};
-use std::{env, str::FromStr, time::Duration};
+use std::{env, str::FromStr};
 
 use std::sync::atomic::AtomicBool;
 use std::thread;
-use opentelemetry::time::Instant;
+use opentelemetry::time::{Duration, Instant};
 
 /// Delay interval between two consecutive exports.
 pub(crate) const OTEL_BSP_SCHEDULE_DELAY: &str = "OTEL_BSP_SCHEDULE_DELAY";

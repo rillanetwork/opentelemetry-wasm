@@ -32,9 +32,9 @@ use std::{
     str::FromStr,
     sync::Arc,
     thread,
-    time::Duration,
-    time::Instant,
 };
+
+use opentelemetry::time::{Duration, Instant};
 
 /// Delay interval between two consecutive exports.
 pub(crate) const OTEL_BLRP_SCHEDULE_DELAY: &str = "OTEL_BLRP_SCHEDULE_DELAY";

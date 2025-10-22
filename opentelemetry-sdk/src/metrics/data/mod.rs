@@ -627,7 +627,7 @@ mod tests {
             value: 0u32,
             exemplars: vec![Exemplar {
                 filtered_attributes: vec![],
-                time: now(),
+                time: SystemTime::now(),
                 value: 0u32,
                 span_id: [0; 8],
                 trace_id: [0; 16],
@@ -645,7 +645,7 @@ mod tests {
             sum: 0u32,
             exemplars: vec![Exemplar {
                 filtered_attributes: vec![],
-                time: now(),
+                time: SystemTime::now(),
                 value: 0u32,
                 span_id: [0; 8],
                 trace_id: [0; 16],
@@ -672,7 +672,7 @@ mod tests {
             zero_threshold: 0.0,
             exemplars: vec![Exemplar {
                 filtered_attributes: vec![],
-                time: now(),
+                time: SystemTime::now(),
                 value: 0u32,
                 span_id: [0; 8],
                 trace_id: [0; 16],

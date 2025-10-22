@@ -237,8 +237,8 @@ mod tests {
                 value: 1u64,
                 exemplars: vec![],
             }],
-            start_time: Some(now()),
-            time: now(),
+            start_time: Some(SystemTime::now()),
+            time: SystemTime::now(),
         })
         .into();
         let new_attributes = [KeyValue::new("b", 2)];
@@ -275,8 +275,8 @@ mod tests {
                         exemplars: vec![],
                     },
                 ],
-                start_time: now(),
-                time: now(),
+                start_time: SystemTime::now(),
+                time: SystemTime::now(),
                 temporality: if temporality == Temporality::Delta {
                     Temporality::Cumulative
                 } else {
@@ -322,8 +322,8 @@ mod tests {
                         exemplars: vec![],
                     },
                 ],
-                start_time: now(),
-                time: now(),
+                start_time: SystemTime::now(),
+                time: SystemTime::now(),
                 temporality: if temporality == Temporality::Delta {
                     Temporality::Cumulative
                 } else {
@@ -367,8 +367,8 @@ mod tests {
                     sum: 3u64,
                     exemplars: vec![],
                 }],
-                start_time: now(),
-                time: now(),
+                start_time: SystemTime::now(),
+                time: SystemTime::now(),
                 temporality: if temporality == Temporality::Delta {
                     Temporality::Cumulative
                 } else {
@@ -424,8 +424,8 @@ mod tests {
                     zero_threshold: 1.0,
                     exemplars: vec![],
                 }],
-                start_time: now(),
-                time: now(),
+                start_time: SystemTime::now(),
+                time: SystemTime::now(),
                 temporality: if temporality == Temporality::Delta {
                     Temporality::Cumulative
                 } else {

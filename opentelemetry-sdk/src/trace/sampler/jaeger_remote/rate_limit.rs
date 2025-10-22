@@ -16,7 +16,7 @@ impl LeakyBucket {
             span_per_sec,
             available: bucket_size,
             bucket_size,
-            last_time: now(),
+            last_time: SystemTime::now(),
         }
     }
 
