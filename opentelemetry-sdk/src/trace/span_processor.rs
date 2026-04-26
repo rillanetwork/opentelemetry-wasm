@@ -43,11 +43,11 @@ use opentelemetry::{otel_debug, otel_error, otel_warn};
 use std::cmp::min;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::{Arc, Mutex};
-use std::{env, str::FromStr, time::Duration};
+use std::{env, str::FromStr};
 
 use std::sync::atomic::AtomicBool;
 use std::thread;
-use std::time::Instant;
+use opentelemetry::time::{Duration, Instant};
 
 /// Delay interval between two consecutive exports.
 pub(crate) const OTEL_BSP_SCHEDULE_DELAY: &str = "OTEL_BSP_SCHEDULE_DELAY";
@@ -203,7 +203,7 @@ impl<T: SpanExporter> SpanProcessor for SimpleSpanProcessor<T> {
 /// };
 /// use opentelemetry::trace::Tracer as _;
 /// use opentelemetry::trace::Span;
-/// use std::time::Duration;
+/// use opentelemetry::time::Duration;
 ///
 /// fn main() {
 ///     // Step 1: Create an exporter (e.g., a No-Op Exporter for demonstration).
@@ -949,7 +949,7 @@ mod tests {
     use crate::trace::{SpanData, SpanExporter};
     use opentelemetry::trace::{SpanContext, SpanId, SpanKind, Status};
     use std::fmt::Debug;
-    use std::time::Duration;
+    use opentelemetry::time::Duration;
 
     #[test]
     fn simple_span_processor_on_end_calls_export() {
